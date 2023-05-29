@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="reset/reset.css" rel="stylesheet" type="text/css">
+    <link href="style/pie.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #050e2d;
+        }
+
+        #contain {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(52, 129, 210, .2) #050e2d;
+            overflow: hidden;
+
+        }
+
+        #nav {
+            float: left;
+            background-color: #01081f;
+            width: 280px;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+        }
+
+        .profile-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .profile-box::after{
+            content: '';
+            border-bottom: solid 3px #3d7eff;
+            width: 100%;
+            position: relative;
+            top: 20px;
+
+        }
+        .profile-photo-wrapper {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-bottom: 16px;
+        }
+
+        .profile-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-text,
+        .profile-subtext {
+            font-size: 22px;
+            line-height: 16px;
+            color: #5e6a81;
+            margin: 8px 0 8px 0;
+        }
+
+        .profile-text { font-weight: 600; }
+
+        #nav ul {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+        }
+
+        #nav ul li{
+            color: #3d7eff;
+            width: 100%;
+            padding-top: 35px;
+            padding-right: 20px;
+            height: 60px;
+            font-size: 30px;
+            text-align: right;
+            cursor: pointer;
+            transition: all .4s ease-in;
+            
+
+        }
+
+        #nav ul .active{
+        color: #fff;
+
+       }
+        
+       #nav ul .active::after{
+        content: "";
+        border: 1px solid;
+        position:relative;
+        left: 7%;
+        height: 60px;
+        opacity: 1;
+       }
+      
+
+       
+       
+
+        #article {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: radial-gradient(circle, rgba(5, 19, 64, 1) 1%, rgba(4, 15, 50, 1) 100%);
+
+
+        }
+
+        #btn_panel {
+            position: relative;
+            margin-top:40vh;          
+           margin-left: auto;
+           margin-right: auto;
+           
+
+        }
+
+        #btn_panel span {
+            display: block;
+            font-size: 28px;
+
+        }
+
+        #btn_panel ul {
+            list-style-type: none;
+            display: inline;
+            padding: 0;
+            margin: 0;
+        }
+
+        #btn_panel ul li {
+
+            float: left;
+            padding: 10px;
+            margin-left: 60px;
+
+        }
+
+        #btn_panel ul li a {
+            display: block;
+            width: 60px;
+            height: 65px;
+            text-decoration: none;
+            text-align: center;
+            color: #565446;
+            background: #fcfcfc;
+            background-image: linear-gradient(100% 40% 270deg, #FFFFFF, #eaeaea, #f5f5f5 100%);
+            border-radius: 4px;
+            opacity: .5;
+        }
+
+        #btn_panel ul .active a{
+            background-color: orange;
+        }
+        #btn_panel ul a:hover{
+            background-color: orange;
+        }
+        #footer {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            /* z-index: 99; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contain">
+        <!-- 會員列&選擇欄 -->
+        <div id="nav">
+            <div class="profile-box">
+                <div class="profile-photo-wrapper">
+                    <img src="images/photo_Gura.png" alt="profile">
+                </div>
+                <p class="profile-text">王小明</p>
+                <p class="profile-subtext">目前存款:126000</p>
+            </div>         
+            <ul>
+                <li class="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
+                        <path d="M9 22V12h6v10M2 10.6L12 2l10 8.6" />
+                    </svg>
+                    <span>總覽</span>
+                </li>
+                <li class="nav_item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg><span>交易</span></li>
+                <li class="nav_item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg><span>會計</span></li>
+                <li class="nav_item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg><span>設定</span></li>
+            </ul>
+        </div>
+        <!-- 主內容 -->
+        <div id="article">
+
+            <!-- 圖表呈現 -->
+            <div class="chart">
+                <h1>五月收支:</h1>
+                <div id="pie_1">
+                    <h2 class="label">收入來源</h2>
+                    <div id="income">
+                        <ul>
+                            <li><span></span>薪資</li>
+                            <li><span></span>股票</li>
+                        </ul>
+                    </div>
+                    <div class="pie_chart">
+                        <ul>
+                            <li id="i1_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="i1_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="i2_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="i2_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="i3_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="i3_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="i4_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="i4_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="i5_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="i5_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="pie_2">
+                    <h2 class="label">支出花費</h2>
+                    <div id="spend">
+                        <ul>
+                            <li><span></span>伙食費</li>
+                            <li><span></span>通行費</li>
+                            <li><span></span>衣服</li>
+                            <li><span></span>遊戲</li>
+                            <li><span></span>帳單</li>
+                        </ul>
+                    </div>
+                    <div class="pie_chart">
+                        <ul>
+                            <li id="s1_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="s1_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="s2_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="s2_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="s3_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="s3_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="s4_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="s4_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                            <li id="s5_r">
+                                <p><span class="pie_left"></span></p>
+                            </li>
+                            <li id="s5_l">
+                                <p><span class="pie_right"></span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="btn_panel">
+                <ul>
+                    <li ><a href="#M1_2023"><br><span>1月</span></a></li>
+                    <li><a href="#M2_2023"><br><span>2月</span></a></li>
+                    <li><a href="#M3_2023"><br><span>3月</span></a></li>
+                    <li><a href="#M4_2023"><br><span>4月</span></a></li>
+                    <li class="active"><a href="#M5_2023"><br><span>5月</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 頁尾 -->
+        <div id="footer">
+            <p>Copyright &copy 2020 資策會 版權所有</p>
+        </div>
+    </div>
+</body>
+
+</html>

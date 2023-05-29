@@ -1,0 +1,315 @@
+
+.chart {      
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 130px;
+    top: 100px;
+
+}
+.chart h1{
+    font-size: 36px;
+    color: #FFF;
+}
+#pie_1 {
+    position: relative;  
+    top: 80px;
+    margin-left: 100px;
+    margin-right: 200px;
+    /* right: 150px; */
+}
+
+#pie_2 {
+    position: relative;
+    top: 80px;
+    margin-left: 150px;
+   
+    /* right: 150px; */
+}
+
+#pie_1 h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+#pie_2 h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+label {
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+#income {
+    color: #fff;
+    position: absolute;
+    left: 340px;
+    top: 80px;
+    width: 120px;
+
+}
+
+#spend {
+    color: #fff;
+    position: absolute;
+    left: 340px;
+    top: 80px;
+    width: 120px;
+}
+
+#spend span {
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 5px 5px 0 0;
+    background: #FFFFFF;
+}
+
+#spend ul :nth-child(1) span {
+    background: #0092B9;
+}
+
+#spend ul :nth-child(2) span {
+    background: #86AD00;
+}
+
+#spend ul :nth-child(3) span {
+    background: #F2B705;
+}
+
+#spend ul :nth-child(4) span {
+    background: #D97904;
+}
+
+#spend ul :nth-child(5) span {
+    background: #BC3603;
+}
+
+
+
+#income span {
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 5px 5px 0 0;
+    background: #FFFFFF;
+}
+
+#income ul :nth-child(1) span {
+    background: #0092B9;
+}
+
+#income ul :nth-child(2) span {
+    background: #86AD00;
+}
+
+#income ul :nth-child(3) span {
+    background: #F2B705;
+}
+
+#income ul :nth-child(4) span {
+    background: #D97904;
+}
+
+#income ul :nth-child(5) span {
+    background: #BC3603;
+}
+
+.pie_chart {
+    position: relative;
+    width: 300px;    
+    margin: 0;
+    padding: 0;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.2)));
+}
+
+.pie_chart ul {
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.pie_chart li {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.pie_chart p {
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.pie_chart li p {
+    transition: all .7s ease-out;
+}
+
+.pie_chart span {
+    display: block;
+    width: 150px;
+    height: 300px;
+}
+
+
+
+.pie_left {
+
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+}
+
+.pie_right {
+    margin-left: 150px;   
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+
+
+#i1_l span {
+    background: #86AD00;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #9bc800 10%, #86AD00 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#9bc800), to(#86AD00));
+}
+
+#i1_r span {
+    background: #86AD00;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #9bc800 10%, #86AD00 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#9bc800), to(#86AD00));
+}
+
+#i2_l span {
+    background: #0092B9;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #00addb 10%, #0092B9 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#00addb), to(#0092B9));
+}
+
+#i2_r span {
+    background: #0092B9;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #00addb 10%, #0092B9 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#00addb), to(#0092B9));
+}
+
+#s1_l span {
+    background: #BC3603;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #de3d00 10%, #BC3603 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#de3d00), to(#BC3603));
+}
+
+#s1_r span {
+    background: #BC3603;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #de3d00 10%, #BC3603 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#de3d00), to(#BC3603));
+}
+
+#s2_l span {
+    background: #D97904;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #fb8a00 10%, #D97904 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#fb8a00), to(#D97904));
+}
+
+#s2_r span {
+    background: #D97904;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #fb8a00 10%, #D97904 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#fb8a00), to(#D97904));
+}
+
+#s3_l span {
+    background: #F2B705;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #ffc517 10%, #F2B705 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#ffc517), to(#F2B705));
+}
+
+#s3_r span {
+    background: #F2B705;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #ffc517 10%, #F2B705 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#ffc517), to(#F2B705));
+}
+
+#s4_l span {
+    background: #86AD00;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #9bc800 10%, #86AD00 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#9bc800), to(#86AD00));
+}
+
+#s4_r span {
+    background: #86AD00;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #9bc800 10%, #86AD00 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#9bc800), to(#86AD00));
+}
+
+#s5_l span {
+    background: #0092B9;
+    background-image: -moz-radial-gradient(left 45deg, circle closest-corner, #00addb 10%, #0092B9 100%);
+    background-image: -webkit-gradient(radial, left center, 10, left center, 150, from(#00addb), to(#0092B9));
+}
+
+#s5_r span {
+    background: #0092B9;
+    background-image: -moz-radial-gradient(right 45deg, circle closest-corner, #00addb 10%, #0092B9 100%);
+    background-image: -webkit-gradient(radial, right center, 10, right center, 150, from(#00addb), to(#0092B9));
+}
+
+.pie_chart ul :nth-child(1) p,
+ .pie_chart ul :nth-child(1) p {
+   transform: rotate(180deg);   
+}
+
+.pie_chart ul :nth-child(2) p,
+ .pie_chart ul :nth-child(2) p {
+    transform: rotate(180deg);
+  
+}
+
+.pie_chart ul :nth-child(3) p,
+ .pie_chart ul :nth-child(3) p {
+    -moz-transform: rotate(180deg);  
+}
+
+.pie_chart ul :nth-child(4) p,
+ .pie_chart ul :nth-child(4) p {
+    transform: rotate(170deg);   
+}
+
+.pie_chart ul :nth-child(5) p,
+ .pie_chart ul :nth-child(5) p {
+   transform: rotate(180deg); 
+}
+
+.pie_chart ul :nth-child(6) p,
+ .pie_chart ul :nth-child(6) p {
+    transform: rotate(152deg);  
+}
+
+.pie_chart ul :nth-child(7) p,
+ .pie_chart ul :nth-child(7) p {
+    transform: rotate(180deg);    
+}
+
+.pie_chart ul :nth-child(8) p,
+ .pie_chart ul :nth-child(8) p {
+    transform: rotate(126deg);
+   
+}
+
+.pie_chart ul :nth-child(9) p,
+ .pie_chart ul :nth-child(9) p {
+    transform: rotate(180deg);  
+}
+
+.pie_chart ul :nth-child(10) p,
+ .pie_chart ul :nth-child(10) p {
+    transform: rotate(36deg);
+   
+}
